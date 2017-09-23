@@ -1,5 +1,6 @@
 const { range } = require('lodash')
 const { workspaceMock } = require('./workspaceMock')
+const { ticket } = require('../ticket')
 
 const storage = []
 
@@ -11,4 +12,11 @@ function create (workspace) {
   storage.push(workspace)
   return workspace
 }
-module.exports = { all, create }
+
+function book (data) {
+  return {
+    ticket: ticket(data)
+  }
+}
+
+module.exports = { all, create, book }

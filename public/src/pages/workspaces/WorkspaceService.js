@@ -13,16 +13,20 @@
    * @constructor
    */
   function WorkspaceList ($http) {
-    // Promise-based API
     return {
-      loadContent: function () {
+      loadContent: () => {
         return $http
           .get('/api/workspaces')
           .then(res => res.data)
       },
-      create: function (workspace) {
+      create: (workspace) => {
         return $http
           .post('/api/workspaces', workspace)
+          .then(res => res.data)
+      },
+      book: (data) => {
+        return $http
+          .post(`/api/workspaces/${data.workspaceId}/book`, data)
           .then(res => res.data)
       }
     }

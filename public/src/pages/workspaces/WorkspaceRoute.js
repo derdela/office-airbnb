@@ -15,6 +15,10 @@
         templateUrl: '/src/pages/workspaces/view/content.html',
         controller: 'WorkspaceListController',
         controllerAs: 'page'
+      }).when('/workspaces/:id', {
+        templateUrl: '/src/pages/workspaces/view/detail.html',
+        controller: 'WorkspaceDetailController',
+        controllerAs: 'page'
       })
       .when('/', {
         templateUrl: '/src/pages/workspaces/view/content.html',

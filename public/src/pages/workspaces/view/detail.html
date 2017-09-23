@@ -1,0 +1,7 @@
+<div class="md-inline-form">
+    <md-content layout-gt-sm="row" layout-padding>
+        {{page.workspace.id}}
+        <qrcode ng-if="page.ticket" data="{{page.ticket}}" size="200"></qrcode>
+        <md-button ng-click="page.book(page.workspace.id)">Book</md-button>
+    </md-content>
+</div>

@@ -8,6 +8,9 @@
     .controller('WorkspaceCreateController', [
       'workspaceService',
       WorkspaceCreateController])
+    .controller('WorkspaceDetailController', [
+      'workspaceService', '$routeParams',
+      WorkspaceDetailController])
 
   /**
    * About Controller for the Angular Material Starter App
@@ -16,15 +19,13 @@
    * @param avatarsService
    * @constructor
    */
-  function WorkspaceListController (workplaceService, $mdBottomSheet, $q) {
-    var self = this
+  function WorkspaceListController (workspaceService, $mdBottomSheet, $q) {
+    this.content = []
 
-    self.content = []
-
-    workplaceService
+    workspaceService
       .loadContent()
-      .then(function (workspaces) {
-        self.workspaces = workspaces
+      .then((workspaces) => {
+        this.workspaces = workspaces
       }).catch(console.log)
   }
 
@@ -32,6 +33,21 @@
     this.workspace = {}
     this.submit = () => {
       workspaceService.create(this.workspace)
+    }
+  }
+
+  function WorkspaceDetailController (workspaceService, $routeParams) {
+    this.workspace = {
+      id: $routeParams.id
+    }
+
+    this.book = (workspaceId) => {
+      const tomorrow = new Date()
+      tomorrow.setDate(tomorrow.getDate() + 1)
+      workspaceService.book({ workspaceId, name: 'dela', from: new Date(), to: tomorrow })
+        .then(ticket => {
+          this.ticket = ticket
+        })
     }
   }
 })()
