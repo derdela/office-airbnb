@@ -4,8 +4,9 @@ import { app } from './http'
 
 const request = supertest(app.listen())
 
-test('hello world test', async t => {
-  await request.get('/api')
-        .expect(200, { msg: 'hello world' })
-  t.pass()
+test('GET /api/workplaces', async t => {
+  const result = await request.get('/api/workplaces')
+        .expect(200)
+
+  t.true(Array.isArray(result.body))
 })

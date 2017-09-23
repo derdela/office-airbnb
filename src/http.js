@@ -1,10 +1,11 @@
 const Koa = require('koa')
 const router = require('koa-router')()
+const workplaces = require('./workplaces')
 
 const app = new Koa()
 
-router.get('/api', ctx => {
-  ctx.body = { msg: 'hello world' }
+router.get('/api/workplaces', async ctx => {
+  ctx.body = await workplaces.all()
 })
 
 app
