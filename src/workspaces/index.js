@@ -4,6 +4,7 @@ const clusterMaker = require('clusters')
 const districts = require('../data/districts.json')
 const desks = require('../data/desks.json')
 const storage = range(100).map(workspaceMock)
+const kmeans = require('node-kmeans')
 
 function all () {
   return storage
@@ -49,15 +50,32 @@ function generateFeatures (workspace) {
  * @return Promise
  */
 function cluster () {
-  let features = storage.map(generateFeatures)
-  
-  clusterMaker.k(3)
-  clusterMaker.data(features)
-  clusterMaker.clusters()
 
-  // Label based on class 
-  
+  return new Promise((resolve, reject) => {
+    let features = storage.map(generateFeatures)
 
+    // Label based on class 
+    kmeans.clusterize(features, {k: 3}, (err,res) => {
+      if (err) console.error(err);
+      else {
+
+        // Order clusters based on total score
+        res.sort((a, b) => {
+          return a.centroid.reduce((total, num) => {return total + num;}) - b.centroid.reduce((total, num) => {return total + num;}) 
+        })
+
+        // Set labels 
+        const types = ['Deluxe', 'Premium', 'Basic']
+        for (let i = 0; i < 3; i++) {
+          res[i].clusterInd.forEach(workspaceIndex => {
+            storage[workspaceIndex].class = types[i]
+          })
+        }
+
+        resolve(storage)
+      }
+    });
+  })
 }
 
 function create (workspace) {
