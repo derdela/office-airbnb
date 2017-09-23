@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "faker": "^4.1.0",
+    "https": "^1.0.0",
     "instascan": "^1.0.0",
     "jsonwebtoken": "^8.0.1",
     "koa": "^2.3.0",
