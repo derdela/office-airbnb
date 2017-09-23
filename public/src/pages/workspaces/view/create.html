@@ -1,0 +1,35 @@
+<div class="md-inline-form">
+    <md-content layout-gt-sm="row" layout-padding>
+        <div>
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="page.workspace.name">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Price</label>
+                <input ng-model="page.workspace.price">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Street</label>
+                <input ng-model="page.workspace.address.street">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Zip Code</label>
+                <input ng-model="page.workspace.address.zipCode">
+            </md-input-container>
+
+            <md-input-container>
+                <label>City</label>
+                <input ng-model="page.workspace.address.city">
+            </md-input-container>
+
+            <md-button class="md-primary" ng-click="page.submit()">
+                create
+            </md-button>
+
+        </div>
+    </md-content>
+</div>

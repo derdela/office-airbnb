@@ -1,10 +1,13 @@
 (function () {
   angular
     .module('workspace')
-    .controller('WorkspaceController', [
+    .controller('WorkspaceListController', [
       'workspaceService', '$mdBottomSheet', '$q',
-      WorkspaceController
+      WorkspaceListController
     ])
+    .controller('WorkspaceCreateController', [
+      'workspaceService',
+      WorkspaceCreateController])
 
   /**
    * About Controller for the Angular Material Starter App
@@ -13,15 +16,22 @@
    * @param avatarsService
    * @constructor
    */
-  function WorkspaceController (aboutService, $mdBottomSheet, $q) {
+  function WorkspaceListController (workplaceService, $mdBottomSheet, $q) {
     var self = this
 
-    self.content = {}
+    self.content = []
 
-    aboutService
+    workplaceService
       .loadContent()
       .then(function (workspaces) {
         self.workspaces = workspaces
       }).catch(console.log)
+  }
+
+  function WorkspaceCreateController (workspaceService) {
+    this.workspace = {}
+    this.submit = () => {
+      workspaceService.create(this.workspace)
+    }
   }
 })()

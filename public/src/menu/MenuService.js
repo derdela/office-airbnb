@@ -18,6 +18,11 @@
         title: 'Workspaces',
         href: '#/workspaces',
         colorHex: 'FF595B'
+      },
+      {
+        title: 'create',
+        href: '#/workspaces/create',
+        colorHex: 'FF595B'
       }
     ]
 
