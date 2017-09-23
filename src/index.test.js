@@ -4,6 +4,7 @@ import * as faker from 'faker'
 import * as jwt from 'jsonwebtoken'
 import { app } from './http'
 import { workspaceMock } from './workspaces/workspaceMock'
+import workspace from './workspaces'
 
 const request = supertest(app.listen())
 
@@ -38,12 +39,25 @@ test('book a desk', async t => {
   const name = faker.name.firstName()
   const from = new Date()
   const to = faker.date.future()
-
+  await workspace.create({ id: workspaceId })
   const { body } = await request.post(`/api/workspaces/${workspaceId}/book`).send({ name, from, to }).expect(200)
   const decoded = jwt.verify(body.ticket, 'secret')
 
   t.is(decoded.workspaceId, workspaceId)
-  t.is(decoded.fname, name)
+  t.is(decoded.name, name)
   t.is(decoded.from, from.toISOString())
   t.is(decoded.to, to.toISOString())
+})
+
+test('show bookings', async t => {
+  const id = faker.random.uuid()
+  const name = faker.name.firstName()
+  const booking = { workspaceId: id, name }
+
+  await workspace.create({ id })
+  await workspace.book(booking)
+
+  const { body } = await request.get(`/api/workspaces/${id}`).expect(200)
+
+  t.deepEqual(body.bookings, [booking])
 })

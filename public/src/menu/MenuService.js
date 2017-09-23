@@ -2,7 +2,7 @@
   'use strict'
 
   angular.module('menu')
-         .service('menuService', ['$q', MenuService])
+    .service('menuService', ['$q', MenuService])
 
   /**
    * Menu DataService
@@ -25,8 +25,12 @@
         colorHex: 'FF595B'
       },
       {
-        title: 'Scan ticket',
-        href: '#/scan',
+        title: 'Reception',
+        href: '#!/reception'
+      },
+      {
+        title: 'scan',
+        href: '#!/scan',
         colorHex: 'FF595B'
       }
     ]

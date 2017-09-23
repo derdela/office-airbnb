@@ -5,7 +5,7 @@ const districts = require('../data/districts.json')
 const desks = require('../data/desks.json')
 const kmeans = require('node-kmeans')
 
-const storage = range(100).map(workspaceMock)
+const storage = range(1).map(workspaceMock)
 
 function all () {
   return storage
@@ -53,7 +53,7 @@ function cluster () {
     let features = storage.map(generateFeatures)
 
     // Label based on class
-    kmeans.clusterize(features, {k: 3}, (err, res) => {
+    kmeans.clusterize(features, { k: 3 }, (err, res) => {
       if (err) console.error(err)
       else {
         // Order clusters based on total score
@@ -80,10 +80,17 @@ function create (workspace) {
   return workspace
 }
 
+function get (workspaceId) {
+  const workspaces = storage.filter(workspace => workspace.id === workspaceId)
+  return workspaces[0]
+}
+
 function book (data) {
+  const workspace = get(data.workspaceId)
+  workspace.bookings = workspace.bookings ? [...workspace.bookings, data] : [data]
   return {
     ticket: ticket(data)
   }
 }
 
-module.exports = { all, create, cluster, book }
+module.exports = { all, create, cluster, book, get }

@@ -3,7 +3,7 @@ const districts = require('../data/districts.json')
 
 function workspaceMock () {
   return {
-    id: faker.random.uuid(),
+    id: '1',
     name: faker.company.companyName(),
     industry: faker.commerce.department(),
     price: faker.commerce.price(),
