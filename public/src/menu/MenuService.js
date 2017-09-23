@@ -16,12 +16,12 @@
     var menuItems = [
       {
         title: 'Workspaces',
-        href: '#/workspaces',
+        href: '#!/workspaces',
         colorHex: 'FF595B'
       },
       {
         title: 'create',
-        href: '#/workspaces/create',
+        href: '#!/workspaces/create',
         colorHex: 'FF595B'
       }
     ]

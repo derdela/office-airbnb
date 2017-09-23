@@ -28,8 +28,7 @@
   "scripts": {
     "test": "ava",
     "postinstall": "bower update",
-    "prestart": "npm update",
-    "start": "node-dev ./src/index.js"
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
