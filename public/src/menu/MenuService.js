@@ -23,6 +23,11 @@
         title: 'create',
         href: '#!/workspaces/create',
         colorHex: 'FF595B'
+      },
+      {
+        title: 'Reception',
+        href: '#!/reception',
+        colorHex: 'FF595B'
       }
     ]
 

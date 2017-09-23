@@ -16,8 +16,10 @@
     return {
       loadContent: () => {
         return $http
-          .get('/api/workspaces/cluster')
-          .then(res => res.data)
+          .get('/api/workspaces')
+          .then(res => {
+            return res.data
+          })
       },
       create: (workspace) => {
         return $http
@@ -28,6 +30,13 @@
         return $http
           .post(`/api/workspaces/${data.workspaceId}/book`, data)
           .then(res => res.data)
+      },
+      get: (id) => {
+        return $http
+          .get(`/api/workspaces/${id}`)
+          .then(res => {
+            return res.data
+          })
       }
     }
   }
