@@ -23,6 +23,11 @@
         title: 'create',
         href: '#/workspaces/create',
         colorHex: 'FF595B'
+      },
+      {
+        title: 'scan',
+        href: '#/scan',
+        colorHex: 'FF595B'
       }
     ]
 

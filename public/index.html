@@ -100,13 +100,19 @@
   <script src="./src/pages/workspaces/WorkspaceController.js"></script>
   <script src="./src/pages/workspaces/WorkspaceService.js"></script>
 
+  <script src="./src/pages/scanner/Scanner.js"></script>
+  <script src="./src/pages/scanner/ScannerRoute.js"></script>
+  <script src="./src/pages/scanner/ScannerController.js"></script>
+
   <script src="./src/pages/purpose/Purpose.js"></script>
   <script src="./src/pages/purpose/PurposeRoute.js"></script>
   <script src="./src/pages/purpose/PurposeController.js"></script>
 
+  <script src="./assets/js/instascan.min.js"></script>
+
   <script type="text/javascript">
     angular
-      .module('starterApp', ['ngMaterial', 'ngAnimate', 'monospaced.qrcode', 'menu', 'workspace', 'purpose'])
+      .module('starterApp', ['ngMaterial', 'ngAnimate', 'monospaced.qrcode', 'menu', 'workspace', 'scanner', 'purpose'])
       .config(function ($mdThemingProvider, $mdIconProvider) {
 
         $mdIconProvider
