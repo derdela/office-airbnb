@@ -18,17 +18,17 @@ function workspaceMock () {
     features: {
       drinks: ['Coffee', 'Soft Drinks', 'Beer'],
       snacks: ['Chochlate', 'Fruits'],
-      meetingRooms: faker.random.boolean()
+      meetingRooms: faker.random.boolean(),
     },
     desk: {
       name: 'standard',
       type: faker.helpers.randomize([
         'Open Space', 
         'Shared Room',
-        'Individual Room'
+        'Individual Room',
       ]),
       price: faker.commerce.price(),
-      available: faker.random.number({min:5, max:30})
+      available: faker.random.number({min:5, max:30}),
     }
   }
 }

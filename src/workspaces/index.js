@@ -3,11 +3,10 @@ const { workspaceMock } = require('./workspaceMock')
 const clusterMaker = require('clusters')
 const districts = require('../data/districts.json')
 const desks = require('../data/desks.json')
-
-const storage = []
+const storage = range(100).map(workspaceMock)
 
 function all () {
-  return Promise.resolve([...storage, ...(range(100).map(workspaceMock))])
+  return storage
 }
 
 /**
@@ -31,13 +30,12 @@ function generateFeatures (workspace) {
   }).priceIndex
 
 
-
   let deskIndex = desks.find(desk => {
     return desk.name === workspace.desk.type
-  }).qualityIndex
+  }).qualityIndex * 4
 
 
-  let meetingIndex = workspace.features.meetingRooms ? 1 : 0
+  let meetingIndex = workspace.features.meetingRooms ? 13 : 7
 
   return [
     districtIndex,
@@ -51,18 +49,15 @@ function generateFeatures (workspace) {
  * @return Promise
  */
 function cluster () {
+  let features = storage.map(generateFeatures)
+  
   clusterMaker.k(3)
+  clusterMaker.data(features)
+  clusterMaker.clusters()
 
-  all().then(workspaces => {
-    let features = workspaces.map(generateFeatures)
+  // Label based on class 
+  
 
-    clusterMaker.data(features)
-    console.log(clusterMaker.clusters())
-
-  })
-  .catch((err) => {
-    console.log('err' + err)
-  })
 }
 
 function create (workspace) {
