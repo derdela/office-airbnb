@@ -4,7 +4,6 @@ html, body {
   height:auto;
   margin: 0px;
   padding: 0px;
-  background-color: #F5F5F5;
 }
 
 a {
@@ -17,8 +16,8 @@ a {
 /* Toolbar area */
 
 md-toolbar#header-toolbar {
-  min-height: 540px;
-  margin-bottom: -115px;
+  min-height: 200px;
+  margin-bottom: 50px;
 }
 
 md-toolbar#header-toolbar h1 {
@@ -111,7 +110,7 @@ md-list .md-button {
   font-size: 3.3em;
   letter-spacing: -1px;
   font-weight: 300;
-  margin-top: -120px;
+  margin-top: -160px;
   margin-bottom: 57px;
 }
 

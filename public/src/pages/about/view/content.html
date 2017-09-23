@@ -1,8 +1,17 @@
-<md-icon md-svg-icon="svg-1" class="avatar"></md-icon>
-<h2 class="md-title">{{page.content.title}}</h2>
-<p class="md-subhead">{{page.content.description}}</p>
-
-<md-button class="contact" md-no-ink ng-click="page.showContactOptions($event)" aria-label="Share">
-  <md-tooltip>Share</md-tooltip>
-  <md-icon md-svg-icon="share"></md-icon>
-</md-button>
+<md-card>
+  <md-grid-list md-cols="4" md-gutter="1em" md-row-height="4:3">
+    <md-grid-tile style="background-image:url({{page.content.image}}); background-size: cover; background-position: 50%">
+    </md-grid-tile>
+    <md-grid-tile>
+      {{page.content.name}}<br />
+      {{page.content.address.street}} {{page.content.address.number}} <br />
+      {{page.content.address.plz}} {{page.content.address.city}}
+    </md-grid-tile>
+    <md-grid-tile>
+    </md-grid-tile>
+    <md-grid-tile>
+      <h2>&euro; {{page.content.price}}</h2><br />
+      <md-button class="md-warn">Book</md-button>
+    </md-grid-tile>
+  </md-grid-list>
+</md-card>

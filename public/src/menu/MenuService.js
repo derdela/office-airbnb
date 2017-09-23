@@ -15,35 +15,10 @@
   function MenuService($q){
     var menuItems = [
       {
-        title: 'About',
-        href: '#/about',
-        colorHex: '21909E'
-      },
-      {
-        title: 'Purpose',
-        href: '#/purpose',
-        colorHex: 'A53434'
-      },
-      {
-        title: 'GitHub',
-        href: 'http://github.com/ritenv/angular-material-seed',
-        colorHex: 'A53434'
+        title: 'Workplaces',
+        href: '#/workplaces',
+        colorHex: 'FF595B'
       }
-      // {
-      //   title: 'Purpose',
-      //   href: '#/purpose',
-      //   colorHex: '455A64'
-      // },
-      // {
-      //   title: 'Technology',
-      //   href: '#/technology',
-      //   colorHex: '009688'
-      // },
-      // {
-      //   title: 'Credits',
-      //   href: '#/credits',
-      //   colorHex: '455A64'
-      // }
     ];
 
     // Promise-based API

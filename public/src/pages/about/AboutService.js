@@ -14,8 +14,15 @@
    */
   function AboutService($q){
     var data = {
-      title: 'Hello Material World',
-      description: 'This is a ready-to-use AngularJS starter app based on Google Material Design. It uses Angular Material components. If you want to edit this text, it is currently hardcoded in the AboutService.js file, simulating an async load.'
+      name  : 'Sharespace & co',
+      image : 'http://dreamstop.com/wp-content/uploads/2013/07/office-dream-meaning.jpeg',
+      price : 34,
+      address: {
+        street: 'Haupstrasse',
+        number: 12,
+        city: 'Berlin',
+        plz: 19228
+      }
     };
 
     // Promise-based API
