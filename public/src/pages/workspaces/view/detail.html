@@ -1,11 +1,14 @@
-<div class="md-inline-form">
-    <md-content layout-gt-sm="row" layout-padding>
+<md-content layout-padding>
+    <h1>{{page.workspace.name}}</h1>
+    {{page.workspace}}
+</md-content>
+<md-content layout-gt-sm="row" layout-padding>
+    <div layout="row" class="md-block-form">
         <qrcode ng-if="page.ticket" data="{{page.ticket}}" size="200" download></qrcode>
         <md-input-container>
             <label>Name</label>
             <input ng-model="page.booking.name">
         </md-input-container>
-
         <md-input-container>
             <label>from</label>
             <md-datepicker ng-model="page.booking.from" md-placeholder="Enter date"></md-datepicker>
@@ -15,5 +18,5 @@
             <md-datepicker ng-model="page.booking.to" md-placeholder="Enter date"></md-datepicker>
         </md-input-container>
         <md-button ng-click="page.book(page.workspace.id)">Book</md-button>
-    </md-content>
-</div>
+    </div>
+</md-content>

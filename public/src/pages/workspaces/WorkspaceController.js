@@ -37,13 +37,13 @@
   }
 
   function WorkspaceDetailController (workspaceService, $routeParams) {
-    this.workspace = {
-      id: $routeParams.id
-    }
-
     this.booking = {
       workspaceId: $routeParams.id
     }
+
+    workspaceService.get($routeParams.id).then(workspace => {
+      this.workspace = workspace
+    })
 
     this.book = (workspaceId) => {
       workspaceService.book(this.booking)
