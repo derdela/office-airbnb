@@ -1,9 +1,4 @@
 const faker = require('faker')
-const { range } = require('lodash')
-
-function all () {
-  return Promise.resolve(range(100).map(workspaceMock))
-}
 
 function workspaceMock () {
   return {
@@ -31,4 +26,4 @@ function workspaceMock () {
   }
 }
 
-module.exports = { all }
+module.exports = { workspaceMock }

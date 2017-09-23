@@ -1,11 +1,16 @@
 const Koa = require('koa')
 const router = require('koa-router')()
-const workplaces = require('./workplaces')
+const bodyparser = require('koa-bodyparser')
+const workplaces = require('./workspaces')
 
 const app = new Koa()
 
 router.get('/api/workspaces', async ctx => {
   ctx.body = await workplaces.all()
+})
+
+router.post('/api/workspaces', bodyparser(), async ctx => {
+  ctx.body = await workplaces.create(ctx.request.body)
 })
 
 app
