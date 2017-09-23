@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Adlershof (Treptow)",
+    "priceIndex": "10,12"
+  },
+  {
+    "name": "Alt-Hohenschönhausen (Hohenschönhausen)",
+    "priceIndex": "10,19"
+  },
+  {
+    "name": "Altglienicke (Treptow)",
+    "priceIndex": "9,26"
+  },
+  {
+    "name": "Baumschulenweg (Treptow)",
+    "priceIndex": "9,73"
+  },
+  {
+    "name": "Biesdorf (Marzahn)",
+    "priceIndex": "9,34"
+  },
+  {
+    "name": "Blankenburg (Weißensee)",
+    "priceIndex": "8,96"
+  },
+  {
+    "name": "Bohnsdorf (Treptow)",
+    "priceIndex": "9,71"
+  },
+  {
+    "name": "Britz (Neukölln)",
+    "priceIndex": "10,91"
+  },
+  {
+    "name": "Buch (Pankow)",
+    "priceIndex": "8,70"
+  },
+  {
+    "name": "Buckow (Neukölln)",
+    "priceIndex": "8,66"
+  },
+  {
+    "name": "Charlottenburg (Charlottenburg)",
+    "priceIndex": "12,71"
+  },
+  {
+    "name": "Dahlem (Zehlendorf)",
+    "priceIndex": "12,65"
+  },
+  {
+    "name": "Französisch Buchholz (Pankow)",
+    "priceIndex": "9,78"
+  },
+  {
+    "name": "Friedenau (Schöneberg)",
+    "priceIndex": "10,97"
+  },
+  {
+    "name": "Friedrichsfelde (Lichtenberg)",
+    "priceIndex": "10,89"
+  },
+  {
+    "name": "Friedrichshagen (Köpenick)",
+    "priceIndex": "9,27"
+  },
+  {
+    "name": "Friedrichshain (Friedrichshain)",
+    "priceIndex": "13,86"
+  },
+  {
+    "name": "Frohnau (Reinickendorf)",
+    "priceIndex": "9,67"
+  },
+  {
+    "name": "Gatow (Spandau)",
+    "priceIndex": "8,76"
+  },
+  {
+    "name": "Grünau (Köpenick)",
+    "priceIndex": "10,16"
+  },
+  {
+    "name": "Grunewald (Wilmersdorf)",
+    "priceIndex": "13,90"
+  },
+  {
+    "name": "Haselhorst (Spandau)",
+    "priceIndex": "8,16"
+  },
+  {
+    "name": "Heiligensee (Reinickendorf)",
+    "priceIndex": "10,22"
+  },
+  {
+    "name": "Heinersdorf (Weißensee)",
+    "priceIndex": "13,36"
+  },
+  {
+    "name": "Hellersdorf (Hellersdorf)",
+    "priceIndex": "7,88"
+  },
+  {
+    "name": "Hermsdorf (Reinickendorf)",
+    "priceIndex": "9,37"
+  },
+  {
+    "name": "Johannisthal (Treptow)",
+    "priceIndex": "10,54"
+  },
+  {
+    "name": "Karlshorst (Lichtenberg)",
+    "priceIndex": "10,36"
+  },
+  {
+    "name": "Karow (Weißensee)",
+    "priceIndex": "8,41"
+  },
+  {
+    "name": "Kaulsdorf (Hellersdorf)",
+    "priceIndex": "7,65"
+  },
+  {
+    "name": "Kladow (Spandau)",
+    "priceIndex": "10,12"
+  },
+  {
+    "name": "Konradshöhe (Reinickendorf)",
+    "priceIndex": "10,40"
+  },
+  {
+    "name": "Köpenick (Köpenick)",
+    "priceIndex": "8,92"
+  },
+  {
+    "name": "Kreuzberg (Kreuzberg)",
+    "priceIndex": "12,59"
+  },
+  {
+    "name": "Lankwitz (Steglitz)",
+    "priceIndex": "9,50"
+  },
+  {
+    "name": "Lichtenberg (Lichtenberg)",
+    "priceIndex": "10,29"
+  },
+  {
+    "name": "Lichtenrade (Tempelhof)",
+    "priceIndex": "8,86"
+  },
+  {
+    "name": "Lichterfelde (Steglitz)",
+    "priceIndex": "10,35"
+  },
+  {
+    "name": "Mahlsdorf (Hellersdorf)",
+    "priceIndex": "10,14"
+  },
+  {
+    "name": "Mariendorf (Tempelhof)",
+    "priceIndex": "9,38"
+  },
+  {
+    "name": "Marienfelde (Tempelhof)",
+    "priceIndex": "8,16"
+  },
+  {
+    "name": "Marzahn (Marzahn)",
+    "priceIndex": "8,01"
+  },
+  {
+    "name": "Mitte (Mitte)",
+    "priceIndex": "15,75"
+  },
+  {
+    "name": "Müggelheim (Köpenick)",
+    "priceIndex": "9,34"
+  },
+  {
+    "name": "Neu-Hohenschönhausen (Hohenschönhausen)",
+    "priceIndex": "8,54"
+  },
+  {
+    "name": "Neukölln (Neukölln)",
+    "priceIndex": "11,25"
+  },
+  {
+    "name": "Niederschöneweide (Treptow)",
+    "priceIndex": "10,46"
+  },
+  {
+    "name": "Niederschönhausen (Pankow)",
+    "priceIndex": "10,28"
+  },
+  {
+    "name": "Nikolassee (Zehlendorf)",
+    "priceIndex": "14,70"
+  },
+  {
+    "name": "Oberschöneweide (Köpenick)",
+    "priceIndex": "8,90"
+  },
+  {
+    "name": "Pankow (Pankow)",
+    "priceIndex": "10,39"
+  },
+  {
+    "name": "Plänterwald (Treptow)",
+    "priceIndex": "9,33"
+  },
+  {
+    "name": "Prenzlauer Berg (Prenzlauer Berg)",
+    "priceIndex": "13,13"
+  },
+  {
+    "name": "Rahnsdorf (Köpenick)",
+    "priceIndex": "11,10"
+  },
+  {
+    "name": "Reinickendorf (Reinickendorf)",
+    "priceIndex": "9,10"
+  },
+  {
+    "name": "Rosenthal (Pankow)",
+    "priceIndex": "10,28"
+  },
+  {
+    "name": "Rudow (Neukölln)",
+    "priceIndex": "8,28"
+  },
+  {
+    "name": "Schmargendorf (Wilmersdorf)",
+    "priceIndex": "12,65"
+  },
+  {
+    "name": "Schmöckwitz (Köpenick)",
+    "priceIndex": "7,64"
+  },
+  {
+    "name": "Schöneberg (Schöneberg)",
+    "priceIndex": "12,11"
+  },
+  {
+    "name": "Siemensstadt (Spandau)",
+    "priceIndex": "8,87"
+  },
+  {
+    "name": "Spandau (Spandau)",
+    "priceIndex": "8,60"
+  },
+  {
+    "name": "Staaken (Spandau)",
+    "priceIndex": "7,76"
+  },
+  {
+    "name": "Steglitz (Steglitz)",
+    "priceIndex": "10,68"
+  },
+  {
+    "name": "Tegel (Reinickendorf)",
+    "priceIndex": "10,33"
+  },
+  {
+    "name": "Tempelhof (Tempelhof)",
+    "priceIndex": "10,22"
+  },
+  {
+    "name": "Tiergarten (Tiergarten)",
+    "priceIndex": "13,29"
+  },
+  {
+    "name": "Treptow (Treptow)",
+    "priceIndex": "11,34"
+  },
+  {
+    "name": "Waidmannslust (Reinickendorf)",
+    "priceIndex": "7,40"
+  },
+  {
+    "name": "Wannsee (Zehlendorf)",
+    "priceIndex": "11,87"
+  },
+  {
+    "name": "Wedding (Wedding)",
+    "priceIndex": "11,32"
+  },
+  {
+    "name": "Weißensee (Weißensee)",
+    "priceIndex": "10,83"
+  },
+  {
+    "name": "Wilmersdorf (Wilmersdorf)",
+    "priceIndex": "12,41"
+  },
+  {
+    "name": "Wittenau (Reinickendorf)",
+    "priceIndex": "8,09"
+  },
+  {
+    "name": "Zehlendorf (Zehlendorf)",
+    "priceIndex": "10,56"
+  }
+]
