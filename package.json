@@ -12,6 +12,7 @@
     "koa-static": "^4.0.1",
     "lodash": "^4.17.4",
     "qrcode.js": "0.0.1",
+    "node-kmeans": "^1.1.0",
     "superagent": "^3.6.0",
     "supertest": "^3.0.0"
   },
@@ -28,7 +29,7 @@
     "test": "ava",
     "postinstall": "bower update",
     "prestart": "npm update",
-    "start": "node ./src/index.js"
+    "start": "node-dev ./src/index.js"
   },
   "repository": {
     "type": "git",

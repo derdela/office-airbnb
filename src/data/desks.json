@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Open Space",
+    "qualityIndex": 1
+  },
+  {
+    "name": "Shared Room",
+    "qualityIndex": 2
+  },
+  {
+    "name": "Individual Room",
+    "qualityIndex": 3
+  }
+]

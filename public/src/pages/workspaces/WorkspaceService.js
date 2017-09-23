@@ -16,7 +16,7 @@
     return {
       loadContent: () => {
         return $http
-          .get('/api/workspaces')
+          .get('/api/workspaces/cluster')
           .then(res => res.data)
       },
       create: (workspace) => {
