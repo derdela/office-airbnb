@@ -43,7 +43,7 @@ test('book a desk', async t => {
   const decoded = jwt.verify(body.ticket, 'secret')
 
   t.is(decoded.workspaceId, workspaceId)
-  t.is(decoded.name, name)
+  t.is(decoded.fname, name)
   t.is(decoded.from, from.toISOString())
   t.is(decoded.to, to.toISOString())
 })

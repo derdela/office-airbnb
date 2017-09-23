@@ -41,10 +41,12 @@
       id: $routeParams.id
     }
 
+    this.booking = {
+      workspaceId: $routeParams.id
+    }
+
     this.book = (workspaceId) => {
-      const tomorrow = new Date()
-      tomorrow.setDate(tomorrow.getDate() + 1)
-      workspaceService.book({ workspaceId, name: 'dela', from: new Date(), to: tomorrow })
+      workspaceService.book(this.booking)
         .then(ticket => {
           this.ticket = ticket
         })
