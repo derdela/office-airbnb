@@ -200,3 +200,11 @@ span.name {
   font-size:1.1em;
   padding-left:5px;
 }
+
+div.video-container {
+  height: 200px;
+}
+
+div.video-container > video#preview {
+  width: 100%
+}

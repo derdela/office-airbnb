@@ -20,12 +20,12 @@
         colorHex: 'FF595B'
       },
       {
-        title: 'create',
+        title: 'Create',
         href: '#!/workspaces/create',
         colorHex: 'FF595B'
       },
       {
-        title: 'scan',
+        title: 'Scan ticket',
         href: '#/scan',
         colorHex: 'FF595B'
       }

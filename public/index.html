@@ -109,10 +109,11 @@
   <script src="./src/pages/purpose/PurposeController.js"></script>
 
   <script src="./assets/js/instascan.min.js"></script>
+  <script src="./bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
 
   <script type="text/javascript">
     angular
-      .module('starterApp', ['ngMaterial', 'ngAnimate', 'monospaced.qrcode', 'menu', 'workspace', 'scanner'])
+      .module('starterApp', ['ngMaterial', 'ngAnimate', 'monospaced.qrcode', 'menu', 'workspace', 'scanner', 'angular-jwt'])
       .config(function ($mdThemingProvider, $mdIconProvider) {
 
         $mdIconProvider

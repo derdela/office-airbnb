@@ -1,2 +1,18 @@
-aa
-    <video id="preview"></video>
+
+<div class="video-container" ng-show="active">
+  <video id="preview"></video>
+</div>
+<md-card ng-show="!active">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">Reservation {{ticket.workspaceId}}</span>
+      <span class="md-subhead">{{ticket.name}}</span>
+      From: {{ticket.from}} <br />
+      To: {{ticket.to}} 
+    </md-card-title-text>
+    <md-card-content>
+    </md-card-content>
+</md-card>
+
+
+<md-button ng-show="!active" class="md-primary" ng-click="active = true; scanner.start()">Scan again</md-button>

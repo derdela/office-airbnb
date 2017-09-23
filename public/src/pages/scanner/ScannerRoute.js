@@ -9,7 +9,7 @@
       .when('/scan', {
         templateUrl: '/src/pages/scanner/view/scanner.html',
         controller: 'ScannerController',
-        controllerAs: 'page'
+        controllerAs: 'vm'
       })
   }
 })()
