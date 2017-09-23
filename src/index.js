@@ -1,3 +1,14 @@
 const { app } = require('./http')
+const https = require('https')
+const fs = require('fs')
 
-app.listen(3000, () => console.log('running on http://localhost:3000'))
+
+// SSL options
+var options = {
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.crt'),
+  passphrase: 'geheim'
+}
+
+https.createServer(options, app.callback()).listen(3000)
+
