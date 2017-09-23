@@ -1,5 +1,7 @@
 const faker = require('faker')
 
+const districts = require('../data/districts.json');
+
 function workspaceMock () {
   return {
     name: faker.company.companyName(),
@@ -10,8 +12,8 @@ function workspaceMock () {
     address: {
       street: faker.address.streetName(),
       zipCode: faker.address.zipCode(),
-      city: faker.address.city(),
-      country: faker.address.country()
+      district: districts[Math.floor(Math.random()*districts.length)].name,
+      city: 'Berlin',
     },
     features: {
       drinks: ['Coffee', 'Soft Drinks', 'Beer'],
