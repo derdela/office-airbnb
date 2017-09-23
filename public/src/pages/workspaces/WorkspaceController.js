@@ -26,6 +26,7 @@
       .loadContent()
       .then((workspaces) => {
         this.workspaces = workspaces
+        this.randomImage = function() { return Math.floor(Math.random()*7)+1 }
       }).catch(console.log)
   }
 
