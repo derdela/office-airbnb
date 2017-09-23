@@ -10,6 +10,7 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
   <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css" />
   <link rel="stylesheet" href="assets/app.css" />
 
@@ -52,7 +53,7 @@
   </md-sidenav>
 
 
-  <div flex tabIndex="-1" role="main" class="">
+  <div flex tabIndex="-1" role="main" ng-class="menu.selected.style">
 
     <md-toolbar layout="row" class="md-whiteframe-z1" id="header-toolbar" style="background-color: #{{menu.headerColor}}">
       <div flex hide-gt-sm>
@@ -63,15 +64,19 @@
       <h1 flex-gt-sm>Hotdesk</h1>
       <div class="menu" hide-sm hide-xs>
         <md-button ng-href="{{menuItem.href}}" ng-repeat="menuItem in menu.menuItems" ng-click="menu.setActiveMenu(menuItem)" ng-class="{active: menu.selected.title === menuItem.title}">
-          {{menuItem.title}}
+          {{menuItem.title}} 
         </md-button>
       </div>
     </md-toolbar>
 
-    <md-content flex id="content" md-scroll-y>
+    <md-content flex id="content" md-scroll-y class="content">
       <div class="site-title">
-        <h2 class="light">{{menu.selected.title}}</h2>
+        <h2 class="light" ng-hide="menu.selected.style == 'landing'">{{menu.selected.title}}</h2>
       </div>
+
+
+        <h1 class="slogan" ng-show="menu.selected.style == 'landing'">Office space, reïnvented</h1>
+        <md-button ng-show="menu.selected.style == 'landing'" href="#!/workspaces" class="explore md-primary md-accent md-raised" ng-click="menu.setActiveMenu(menu.menuItems[1])">Explore our properties</md-button>
 
       <div ng-view class="view-transition"></div>
     </md-content>

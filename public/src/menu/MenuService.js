@@ -15,6 +15,12 @@
   function MenuService ($q) {
     var menuItems = [
       {
+        title: 'Home',
+        href: '#!/home',
+        colorHex: 'FF595B',
+        style: 'landing'
+      },
+      {
         title: 'Workspaces',
         href: '#!/workspaces',
         colorHex: 'FF595B'

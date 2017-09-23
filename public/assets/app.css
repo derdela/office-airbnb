@@ -208,3 +208,22 @@ div.video-container {
 div.video-container > video#preview {
   width: 100%
 }
+
+div.landing {
+  background: url(./img/landing.jpeg); height: 800px; background-size: 2000px; background-repeat: no-repeat;
+}
+
+div.landing > .content {
+  background-color: transparent !important;
+}
+
+div.landing > md-toolbar#header-toolbar {
+  min-height: 0;
+}
+
+h1.slogan {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 70px;
+  color: #fff;
+  margin-top: 180px;
+}

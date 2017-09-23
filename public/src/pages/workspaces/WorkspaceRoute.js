@@ -22,9 +22,7 @@
         controllerAs: 'page'
       })
       .when('/', {
-        templateUrl: '/src/pages/workspaces/view/content.html',
-        controller: 'WorkspaceListController',
-        controllerAs: 'page'
+        templateUrl: '/src/pages/home/view/landing.html'
       })
   }
 })()
