@@ -8,13 +8,24 @@ function all () {
 function workspaceMock () {
   return {
     name: faker.company.companyName(),
-    price: faker.commerce.price(),
+    industry: faker.commerce.department(),
     address: {
-      city: faker.address.city()
+      street: faker.address.streetName(),
+      zipCode: faker.address.zipCode(),
+      city: faker.address.city(),
+      country: faker.address.country()
     },
-    desks: {
+    features: {
+      drinks: ['Coffee', 'Soft Drinks', 'Beer'],
+      snacks: ['Chochlate', 'Fruits'],
+      meetingRooms: 2
+    },
+    desks: [{
+      name: 'standard',
+      type: faker.helpers.randomize(['Open Space', 'Individual Room', 'Shared Room']),
+      price: faker.commerce.price(),
       available: faker.random.number()
-    }
+    }]
   }
 }
 
