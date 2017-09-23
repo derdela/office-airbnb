@@ -1,6 +1,6 @@
 const faker = require('faker')
-
 const districts = require('../data/districts.json');
+const desks = require('../data/desks.json');
 
 function workspaceMock () {
   return {
@@ -18,14 +18,18 @@ function workspaceMock () {
     features: {
       drinks: ['Coffee', 'Soft Drinks', 'Beer'],
       snacks: ['Chochlate', 'Fruits'],
-      meetingRooms: 2
+      meetingRooms: faker.random.boolean()
     },
-    desks: [{
+    desk: {
       name: 'standard',
-      type: faker.helpers.randomize(['Open Space', 'Individual Room', 'Shared Room']),
+      type: faker.helpers.randomize([
+        'Open Space', 
+        'Shared Room',
+        'Individual Room'
+      ]),
       price: faker.commerce.price(),
-      available: faker.random.number()
-    }]
+      available: faker.random.number({min:5, max:30})
+    }
   }
 }
 

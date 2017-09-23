@@ -9,6 +9,10 @@ router.get('/api/workspaces', async ctx => {
   ctx.body = await workplaces.all()
 })
 
+router.get('/api/workspaces/cluster', async ctx => {
+  ctx.body = await workplaces.cluster()
+})
+
 router.post('/api/workspaces', bodyparser(), async ctx => {
   ctx.body = await workplaces.create(ctx.request.body)
 })
