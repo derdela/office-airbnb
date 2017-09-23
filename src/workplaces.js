@@ -9,6 +9,7 @@ function workspaceMock () {
   return {
     name: faker.company.companyName(),
     industry: faker.commerce.department(),
+    accessibility: faker.random.boolean(),
     address: {
       street: faker.address.streetName(),
       zipCode: faker.address.zipCode(),
