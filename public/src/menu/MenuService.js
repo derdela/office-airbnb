@@ -1,8 +1,8 @@
-(function(){
-  'use strict';
+(function () {
+  'use strict'
 
   angular.module('menu')
-         .service('menuService', ['$q', MenuService]);
+         .service('menuService', ['$q', MenuService])
 
   /**
    * Menu DataService
@@ -12,22 +12,21 @@
    * @returns {{loadMenu: Function}}
    * @constructor
    */
-  function MenuService($q){
+  function MenuService ($q) {
     var menuItems = [
       {
-        title: 'Workplaces',
-        href: '#/workplaces',
+        title: 'Workspaces',
+        href: '#/workspaces',
         colorHex: 'FF595B'
       }
-    ];
+    ]
 
     // Promise-based API
     return {
-      loadMenu : function() {
+      loadMenu: function () {
         // Simulate async nature of real remote calls
-        return $q.when(menuItems);
+        return $q.when(menuItems)
       }
-    };
+    }
   }
-
-})();
+})()

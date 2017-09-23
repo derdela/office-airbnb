@@ -68,12 +68,12 @@
           </md-button>
         </div>
       </md-toolbar>
-      
+
       <md-content flex id="content" md-scroll-y>
         <div class="site-title">
           <h2 class="light">{{menu.selected.title}}</h2>
         </div>
-        
+
         <div ng-view class="view-transition"></div>
       </md-content>
 
@@ -93,10 +93,10 @@
     <script src="./src/menu/MenuController.js"></script>
     <script src="./src/menu/MenuService.js"></script>
 
-    <script src="./src/pages/about/About.js"></script>
-    <script src="./src/pages/about/AboutRoute.js"></script>
-    <script src="./src/pages/about/AboutController.js"></script>
-    <script src="./src/pages/about/AboutService.js"></script>
+    <script src="./src/pages/workspaces/Workspace.js"></script>
+    <script src="./src/pages/workspaces/WorkspaceRoute.js"></script>
+    <script src="./src/pages/workspaces/WorkspaceController.js"></script>
+    <script src="./src/pages/workspaces/WorkspaceService.js"></script>
 
     <script src="./src/pages/purpose/Purpose.js"></script>
     <script src="./src/pages/purpose/PurposeRoute.js"></script>
@@ -105,7 +105,7 @@
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'ngAnimate', 'menu', 'about', 'purpose'])
+              .module('starterApp', ['ngMaterial', 'ngAnimate', 'menu', 'workspace', 'purpose'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider

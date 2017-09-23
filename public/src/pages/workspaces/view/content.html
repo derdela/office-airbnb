@@ -1,16 +1,16 @@
 <md-card>
-  <md-grid-list md-cols="4" md-gutter="1em" md-row-height="4:3">
+  <md-grid-list md-cols="4" md-gutter="1em" md-row-height="4:3" ng-repeat="workspace in page.workspaces">
     <md-grid-tile style="background-image:url({{page.content.image}}); background-size: cover; background-position: 50%">
     </md-grid-tile>
     <md-grid-tile>
-      {{page.content.name}}<br />
-      {{page.content.address.street}} {{page.content.address.number}} <br />
-      {{page.content.address.plz}} {{page.content.address.city}}
+      {{workspace.name}}<br />
+      {{workspace.address.street}} {{workspace.address.number}} <br /> {{workspace.address.zipCode}}
+      {{workspace.address.city}}
     </md-grid-tile>
     <md-grid-tile>
     </md-grid-tile>
     <md-grid-tile>
-      <h2>&euro; {{page.content.price}}</h2><br />
+      <h2>&euro; {{workspace.price}}</h2><br />
       <md-button class="md-warn">Book</md-button>
     </md-grid-tile>
   </md-grid-list>
