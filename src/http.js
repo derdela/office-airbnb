@@ -4,7 +4,7 @@ const workplaces = require('./workplaces')
 
 const app = new Koa()
 
-router.get('/api/workplaces', async ctx => {
+router.get('/api/workspaces', async ctx => {
   ctx.body = await workplaces.all()
 })
 
