@@ -1,11 +1,16 @@
 const Koa = require('koa')
+const router = require('koa-router')()
 
 const app = new Koa()
 
-app.use(ctx => {
-  ctx.body = {msg: 'hello world'}
+router.get('/api', ctx => {
+  ctx.body = { msg: 'hello world' }
 })
 
-// app.use(require('koa-static')('./public'))
+app
+    .use(router.routes())
+    .use(router.allowedMethods())
+
+app.use(require('koa-static')('./public'))
 
 module.exports = { app }
