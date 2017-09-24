@@ -28,7 +28,7 @@
 
     window.Instascan.Camera.getCameras().then(function (cameras) {
       if (cameras.length > 0) {
-        $scope.scanner.start(cameras[1]);
+        $scope.scanner.start(cameras[1] ? cameras[1] : cameras[0]);
       } else {
         console.error('No cameras found.');
       }

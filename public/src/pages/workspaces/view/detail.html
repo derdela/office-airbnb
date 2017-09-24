@@ -1,7 +1,10 @@
 <md-content layout-padding>
     <h1>{{page.workspace.name}}</h1>
-    <div layout="row" >
-    Please fill in your details in order to book a workspace.
+    <div layout="row" ng-hide="page.ticket">
+        Please fill in your details in order to book a workspace.
+    </div>
+    <div layout="row" ng-show="page.ticket">
+        Booking successful. Use the following QR-code to enter your workplace
     </div>
 </md-content>
 <md-content layout="column" layout-padding>
@@ -11,25 +14,25 @@
     <div layout="row" >
         <md-input-container>
             <label>Name</label>
-            <input ng-model="page.booking.name">
+            <input ng-model="page.booking.name" ng-disabled="page.ticket">
         </md-input-container>
     </div>
     <div layout="row" >
         <md-input-container>
             <label>E-mail</label>
-            <input ng-model="page.booking.email">
+            <input ng-model="page.booking.email" ng-disabled="page.ticket">
         </md-input-container>
     </div>
     <h2>Dates</h2>
     <div layout="row">
         <md-input-container>
             <label>from</label>
-            <md-datepicker ng-model="page.booking.from" md-placeholder="Enter date"></md-datepicker>
+            <md-datepicker ng-model="page.booking.from" md-placeholder="Enter date" ng-disabled="page.ticket"></md-datepicker>
         </md-input-container>
         <md-input-container>
             <label>to</label>
-            <md-datepicker ng-model="page.booking.to" md-placeholder="Enter date"></md-datepicker>
+            <md-datepicker ng-model="page.booking.to" md-placeholder="Enter date" ng-disabled="page.ticket"></md-datepicker>
         </md-input-container>
-        <md-button ng-click="page.book(page.workspace.id)">Book</md-button>
+        <md-button ng-click="page.book(page.workspace.id)" ng-disabled="page.ticket">Book</md-button>
     </div>
 </md-content>
