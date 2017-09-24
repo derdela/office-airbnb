@@ -27,7 +27,6 @@ function workspaceMock () {
         'Shared Room',
         'Individual Room'
       ]),
-      price: faker.commerce.price(),
       available: faker.random.number({min: 5, max: 30})
     }
   }

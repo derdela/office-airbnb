@@ -12,13 +12,6 @@
       'workspaceService', '$routeParams', '$mdToast',
       WorkspaceDetailController])
 
-  /**
-   * About Controller for the Angular Material Starter App
-   * @param $scope
-   * @param $mdSidenav
-   * @param avatarsService
-   * @constructor
-   */
   function WorkspaceListController (workspaceService, $mdBottomSheet, $q) {
     this.content = []
 
@@ -26,7 +19,7 @@
       .loadContent()
       .then((workspaces) => {
         this.workspaces = workspaces
-        this.randomImage = function() { return Math.floor(Math.random()*7)+1 }
+        this.randomImage = () => { return Math.floor(Math.random() * 7) + 1 }
       }).catch(console.log)
   }
 
@@ -54,7 +47,7 @@
             $mdToast.simple()
               .textContent('Booked successfully')
               .hideDelay(3000)
-          );
+          )
         })
     }
   }
