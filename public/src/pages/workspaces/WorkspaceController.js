@@ -9,7 +9,7 @@
       'workspaceService',
       WorkspaceCreateController])
     .controller('WorkspaceDetailController', [
-      'workspaceService', '$routeParams',
+      'workspaceService', '$routeParams', '$mdToast',
       WorkspaceDetailController])
 
   /**
@@ -37,7 +37,7 @@
     }
   }
 
-  function WorkspaceDetailController (workspaceService, $routeParams) {
+  function WorkspaceDetailController (workspaceService, $routeParams, $mdToast) {
     this.booking = {
       workspaceId: $routeParams.id
     }
@@ -50,6 +50,11 @@
       workspaceService.book(this.booking)
         .then(ticket => {
           this.ticket = ticket
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Booked successfully')
+              .hideDelay(3000)
+          );
         })
     }
   }
