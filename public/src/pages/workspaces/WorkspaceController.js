@@ -6,7 +6,7 @@
       WorkspaceListController
     ])
     .controller('WorkspaceCreateController', [
-      'workspaceService',
+      'workspaceService', '$http',
       WorkspaceCreateController])
     .controller('WorkspaceDetailController', [
       'workspaceService', '$routeParams', '$mdToast',
@@ -23,8 +23,17 @@
       }).catch(console.log)
   }
 
-  function WorkspaceCreateController (workspaceService) {
+  function WorkspaceCreateController (workspaceService, $http) {
     this.workspace = {}
+    this.districts = []
+    this.deskTypes = [
+      'Open Space',
+      'Shared Room',
+      'Individual Room'
+    ]
+    $http.get('/api/districts').then(res => {
+      this.districts = res.data
+    })
     this.submit = () => {
       workspaceService.create(this.workspace)
     }

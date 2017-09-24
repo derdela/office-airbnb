@@ -2,6 +2,7 @@ const Koa = require('koa')
 const router = require('koa-router')()
 const bodyparser = require('koa-bodyparser')
 const workspaces = require('./workspaces')
+const districts = require('./data/districts')
 
 const app = new Koa()
 
@@ -15,6 +16,10 @@ router.get('/api/workspaces/:id', async ctx => {
 
 router.post('/api/workspaces', bodyparser(), async ctx => {
   ctx.body = await workspaces.create(ctx.request.body)
+})
+
+router.get('/api/districts', async ctx => {
+  ctx.body = districts
 })
 
 router.post('/api/workspaces/:id/book', bodyparser(), async ctx => {

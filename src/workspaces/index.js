@@ -64,7 +64,7 @@ function cluster () {
         })
 
         // Set labels
-        const types = ['Deluxe', 'Premium', 'Basic']
+        const types = ['Basic', 'Premium', 'Deluxe']
         for (let i = 0; i < 3; i++) {
           res[i].clusterInd.forEach(workspaceIndex => {
             storage[workspaceIndex].class = types[i]

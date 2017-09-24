@@ -7,29 +7,36 @@
             </md-input-container>
 
             <md-input-container>
-                <label>Price</label>
-                <input ng-model="page.workspace.price">
-            </md-input-container>
-
-            <md-input-container>
                 <label>Street</label>
                 <input ng-model="page.workspace.address.street">
             </md-input-container>
 
-            <md-input-container>
-                <label>Zip Code</label>
-                <input ng-model="page.workspace.address.zipCode">
+            <md-input-container flex-gt-sm>
+                <label>District</label>
+                <md-select ng-model="page.workspace.address.district">
+                    <md-option ng-repeat="district in page.districts" value="{{district.name}}">
+                        {{district.name}}
+                    </md-option>
+                </md-select>
             </md-input-container>
-
             <md-input-container>
-                <label>City</label>
-                <input ng-model="page.workspace.address.city">
+                <label>Desk Type</label>
+                <md-select ng-model="page.workspace.desk.type">
+                    <md-option ng-repeat="deskType in page.deskTypes" value="{{deskType}}">
+                        {{deskType}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container>
+                <label>Meeting Rooms Available</label>
+                <md-checkbox ng-model="page.workspace.features.meetingRooms" aria-label="Meeting Rooms">
+                    Dedicated Meetingrooms
+                </md-checkbox>
             </md-input-container>
 
             <md-button class="md-primary" ng-click="page.submit()">
                 create
             </md-button>
-
         </div>
     </md-content>
 </div>

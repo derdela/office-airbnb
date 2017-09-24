@@ -1,11 +1,15 @@
+<md-input-container>
+    <label></label>
+    <input ng-model="page.workspace.address.street">
+</md-input-container>
 <md-card ng-repeat="workspace in page.workspaces track by $index">
   <md-grid-list md-cols="4" md-gutter="1em" md-row-height="4:3" >
     <md-grid-tile ng-style="{'background-image': 'url(/assets/img/workspaces/' + ($index % 7 + 1) + '.jpg)'}" style="background-size: cover; background-position: 50%">
     </md-grid-tile>
     <md-grid-tile>
       {{workspace.name}}<br />
-      {{workspace.address.street}} {{workspace.address.number}} <br /> {{workspace.address.zipCode}}
-      {{workspace.address.city}}
+      {{workspace.address.street}} {{workspace.address.number}} <br />
+      {{workspace.address.district}}
     </md-grid-tile>
     <md-grid-tile>
       {{workspace.class}}
