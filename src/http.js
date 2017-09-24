@@ -6,15 +6,11 @@ const workspaces = require('./workspaces')
 const app = new Koa()
 
 router.get('/api/workspaces', async ctx => {
-  ctx.body = await workspaces.all()
+  ctx.body = await workspaces.cluster()
 })
 
 router.get('/api/workspaces/:id', async ctx => {
   ctx.body = await workspaces.get(ctx.params.id)
-})
-
-router.get('/api/workspaces/cluster', async ctx => {
-  ctx.body = await workspaces.cluster()
 })
 
 router.post('/api/workspaces', bodyparser(), async ctx => {
