@@ -28,6 +28,10 @@ router.post('/api/workspaces/:id/book', bodyparser(), async ctx => {
   ctx.body = await workspaces.book(data)
 })
 
+router.get('/api/districts', bodyparser(), async ctx => {
+  ctx.body = require('./data/districts.json')
+})
+
 app
     .use(router.routes())
     .use(router.allowedMethods())

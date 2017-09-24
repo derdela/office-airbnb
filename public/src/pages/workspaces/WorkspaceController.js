@@ -6,7 +6,7 @@
       WorkspaceListController
     ])
     .controller('WorkspaceCreateController', [
-      'workspaceService', '$http',
+      'workspaceService', '$http', '$mdToast',
       WorkspaceCreateController])
     .controller('WorkspaceDetailController', [
       'workspaceService', '$routeParams', '$mdToast',
@@ -23,8 +23,12 @@
       }).catch(console.log)
   }
 
-  function WorkspaceCreateController (workspaceService, $http) {
-    this.workspace = {}
+  function WorkspaceCreateController (workspaceService, $http, $mdToast) {
+    this.workspace = {
+      features: {
+        meatingRooms: false
+      }
+    }
     this.districts = []
     this.deskTypes = [
       'Open Space',
@@ -36,6 +40,12 @@
     })
     this.submit = () => {
       workspaceService.create(this.workspace)
+      $mdToast.show(
+        $mdToast.simple()
+          .textContent('Created successfully')
+          .hideDelay(3000)
+      );
+      this.workspace = {}
     }
   }
 

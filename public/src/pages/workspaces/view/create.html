@@ -1,5 +1,5 @@
 <div class="md-inline-form">
-    <md-content layout-gt-sm="row" layout-padding>
+    <md-content layout="column" layout-padding>
         <div>
             <md-input-container>
                 <label>Name</label>
@@ -10,6 +10,10 @@
                 <label>Street</label>
                 <input ng-model="page.workspace.address.street">
             </md-input-container>
+
+        </div>
+    <md-content layout="column" layout-padding>
+        <div>
 
             <md-input-container flex-gt-sm>
                 <label>District</label>
@@ -27,12 +31,13 @@
                     </md-option>
                 </md-select>
             </md-input-container>
+            
             <md-input-container>
-                <label>Meeting Rooms Available</label>
                 <md-checkbox ng-model="page.workspace.features.meetingRooms" aria-label="Meeting Rooms">
                     Dedicated Meetingrooms
                 </md-checkbox>
             </md-input-container>
+
 
             <md-button class="md-primary" ng-click="page.submit()">
                 create

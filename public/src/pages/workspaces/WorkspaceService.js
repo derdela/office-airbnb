@@ -26,6 +26,16 @@
           .post('/api/workspaces', workspace)
           .then(res => res.data)
       },
+      districts: (workspace) => {
+        return $http
+          .get('/api/districts')
+          .then(res => res.data)
+      },
+      desks: (desks) => {
+        return $http
+          .get('/api/desks')
+          .then(res => res.data)
+      },
       book: (data) => {
         return $http
           .post(`/api/workspaces/${data.workspaceId}/book`, data)
