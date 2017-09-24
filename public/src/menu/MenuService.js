@@ -31,10 +31,6 @@
         colorHex: 'FF595B'
       },
       {
-        title: 'Reception',
-        href: '#!/reception'
-      },
-      {
         title: 'scan',
         href: '#!/scan',
         colorHex: 'FF595B'
